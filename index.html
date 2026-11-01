@@ -14,7 +14,7 @@
 :root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{margin:0;font-family:Cairo,Tahoma,Arial,sans-serif;background:linear-gradient(180deg,#bfe9ff,#fff6d6 60%,#ffe3ef);color:#3b2a6b;min-height:100vh}
-header{text-align:center;padding:22px 14px 6px}
+header{text-align:center;padding:54px 14px 6px}
 h1{margin:0;font-size:clamp(26px,6vw,44px);font-weight:900;color:#ff5a8a;text-shadow:3px 3px 0 #fff,5px 5px 0 #ffd23f}
 header p{margin:6px 0 10px;font-weight:700}
 .bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 12px}
@@ -42,7 +42,7 @@ button:active{transform:translateY(3px);box-shadow:none}
 @keyframes fl{50%{transform:translateY(-5px)}}
 .card h2{margin:2px 0;font-size:19px;font-weight:900;color:var(--c)}
 .card p{margin:0;font-size:13px;font-weight:600;color:#5b4a8a}
-#cf{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+#cf{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:95}
 #t{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:50%;transform:translateX(50%) translateY(120px);background:#3b2a6b;color:#fff;font-weight:800;padding:12px 22px;border-radius:30px;z-index:90;transition:.3s;max-width:90%;text-align:center}
 #t.on{transform:translateX(50%) translateY(0)}
 .pl{position:fixed;font-size:30px;font-weight:900;color:#ff5a8a;z-index:55;pointer-events:none;animation:up 1s forwards;text-shadow:2px 2px 0 #fff}
@@ -56,7 +56,7 @@ button:active{transform:translateY(3px);box-shadow:none}
 .wb h3{margin:6px 0;font-size:30px;font-weight:900;color:#ff5a8a}
 .wb p{margin:4px 0 14px;font-weight:700;font-size:18px}
 [hidden]{display:none!important}
-.tabs{display:flex;gap:10px;justify-content:center;margin:14px 0 0}.tabs button{background:#fff;color:#7c5cff;box-shadow:0 4px 0 #cdbfff;font-size:18px}.tabs button.on{background:#7c5cff;color:#fff;box-shadow:0 4px 0 #5a3fd0}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0 0}.tabs button{background:#fff;color:#7c5cff;box-shadow:0 4px 0 #cdbfff;font-size:18px}.tabs button.on{background:#7c5cff;color:#fff;box-shadow:0 4px 0 #5a3fd0}
 .tk{max-width:760px;margin:14px auto 90px;padding:0 14px}
 .tk .bar{margin-bottom:16px}
 .tkc{background:#fff;border-radius:26px;border:4px solid #e4dcff;padding:14px;margin-bottom:16px;transition:.3s}
@@ -90,12 +90,24 @@ header{position:relative}
 .cb{margin-top:14px;display:flex;gap:8px;justify-content:center}
 .pw{background:#fff;border-radius:28px;padding:22px;text-align:center;max-width:340px;width:100%;border:5px solid #7c5cff}
 .pw h3{margin:0 0 10px;font-size:20px;font-weight:900}.pw input{width:100%;margin-bottom:10px;letter-spacing:6px;font-size:22px}
-body.ch>header,body.ch>.tabs,body.ch>#pg1,body.ch>#pg2,body.ch>#pg3{display:none}
+body.ch>header,body.ch>.tabs,body.ch>#pg1,body.ch>#pg2,body.ch>#pg3,body.ch>#pg4{display:none}
 .bd{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff;border:4px solid #e4dcff;border-radius:20px;padding:10px 12px;margin-bottom:10px;font-weight:800;font-size:18px}
 .bd .av{font-size:34px;line-height:1}.bd .rk{font-size:28px;min-width:36px;text-align:center}.bd .sp{flex:1}.bd small{width:100%;font-size:13px;color:#5b4a8a}
 #cu{position:fixed;inset:0;background:rgba(59,42,107,.85);z-index:80;display:none;align-items:center;justify-content:center;padding:14px;overflow:auto}#cu.on{display:flex}
 .pk{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:12px}.pk button{font-size:26px;padding:6px;background:#f4f0ff;box-shadow:none}.pk button.on{background:#ffd23f;outline:3px solid #7c5cff}
 .cs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}.cs button{width:36px;height:36px;border-radius:50%;padding:0;box-shadow:none;border:3px solid #fff;outline:2px solid #ddd}.cs button.on{outline:3px solid #3b2a6b}
+#bk,#gm{position:fixed;inset:0;background:rgba(59,42,107,.85);z-index:80;display:none;align-items:center;justify-content:center;padding:14px;overflow:auto}#bk.on,#gm.on{display:flex}
+.bkl{font-family:inherit;font-size:16px;font-weight:800;padding:10px 18px;border-radius:30px;background:#2bb0ff;color:#fff;cursor:pointer;box-shadow:0 4px 0 #1a86c9}
+.gb{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.gc{aspect-ratio:1;font-size:32px;border-radius:16px;background:#7c5cff;color:#fff;display:flex;align-items:center;justify-content:center;padding:0;box-shadow:0 4px 0 #5a3fd0}
+.gc.f{background:#fff6d6;box-shadow:none}.gc.m{background:#d9fbe9}#gst{font-weight:800;margin-bottom:6px}
+.qo{display:block;width:100%;margin-bottom:8px;font-size:18px}.gmn button{display:block;width:100%;margin-bottom:10px;font-size:20px}
+#sky{position:relative;height:280px;border-radius:20px;background:linear-gradient(180deg,#1b1456,#5b3fd0);overflow:hidden;margin-bottom:8px;color:#fff;font-weight:900;font-size:26px}
+.sk{position:absolute;font-size:36px;background:none;box-shadow:none;padding:0;animation:pp .25s}@keyframes pp{from{transform:scale(0)}}
+body.th-r{background:linear-gradient(180deg,#1b1456,#3a2a8c 55%,#7b5cd6)}body.th-r header p,body.th-r .hint,body.th-r .tk>p{color:#fff}body.th-r h1{color:#ffd23f;text-shadow:3px 3px 0 #3a2a8c}
+body.th-r header::after{content:"🌙 ⭐ 🕌 ⭐ 🌙";display:block;font-size:26px;margin-top:6px}
+body.th-e{background:linear-gradient(180deg,#ffd6ea,#fff3b0 60%,#c7f5d9)}body.th-e h1{color:#e91e63}
+body.th-e header::after{content:"🎉 🐑 🎁 🎈 🎉";display:block;font-size:26px;margin-top:6px}
 #cv{max-width:640px;margin:0 auto;padding:16px 14px 90px}
 .cv-h{text-align:center}.cv-h .av{font-size:80px;line-height:1}.cv-h h2{margin:4px 0 12px;font-size:30px;font-weight:900;color:#ff5a8a}
 .cv-b{background:#fff;border-radius:26px;border:4px solid #e4dcff;padding:14px;margin-bottom:16px}
@@ -110,6 +122,7 @@ body.ch>header,body.ch>.tabs,body.ch>#pg1,body.ch>#pg2,body.ch>#pg3{display:none
 <header>
 <button class="lk" id="lk" onclick="lockBtn()">🔓 ولي الأمر</button>
 <button class="lk" id="lk2" style="left:150px" hidden onclick="pinShow('🔑 كلمة سر جديدة (اتركها فارغة للإلغاء)','set')" aria-label="تغيير كلمة السر">🔑</button>
+<button class="lk" id="thb" style="left:auto;right:12px" onclick="thNext()">🎨 عادي</button>
 <h1>🏆 مسابقة الأوسمة الجميلة 🏆</h1>
 <p>من يجمع ١٠ أوسمة أولًا هو البطل الفائز!</p>
 <div class="bar" id="mb">
@@ -119,7 +132,7 @@ body.ch>header,body.ch>.tabs,body.ch>#pg1,body.ch>#pg2,body.ch>#pg3{display:none
 <button class="g" onclick="newRound()">🔄 جولة جديدة</button>
 </div>
 </header>
-<div class="tabs"><button id="t1" class="on" onclick="tab(1)">🏅 الأوسمة</button><button id="t2" onclick="tab(2)">✅ المهام</button><button id="t3" onclick="tab(3)">👑 لوحة الشرف</button><button onclick="childPick()">👶 وضع الطفل</button></div>
+<div class="tabs"><button id="t1" class="on" onclick="tab(1)">🏅 الأوسمة</button><button id="t2" onclick="tab(2)">✅ المهام</button><button id="t3" onclick="tab(3)">👑 لوحة الشرف</button><button id="t4" onclick="tab(4)">🛒 المتجر</button><button onclick="gOpen()">🎮 الألعاب</button><button onclick="bkOpen()">💾 نسخ احتياطي</button><button onclick="childPick()">👶 وضع الطفل</button></div>
 <section id="pg1">
 <div class="kids" id="kids"></div>
 <div class="hint" id="hint"></div>
@@ -130,10 +143,13 @@ body.ch>header,body.ch>.tabs,body.ch>#pg1,body.ch>#pg2,body.ch>#pg3{display:none
 <div id="tl"></div>
 </section>
 <section id="pg3" class="tk" hidden><div id="bl"></div></section>
+<section id="pg4" class="tk" hidden><div id="sl"></div></section>
 <canvas id="cf"></canvas>
 <div id="t"></div>
-<div id="win"><div class="wb"><div class="tr">🏆</div><h3 id="wn"></h3><p id="wp">جمع ١٠ أوسمة وفاز بالمسابقة! 🎉<br>بارك الله فيه وزاده من الأخلاق الحسنة</p><button class="o" onclick="showCert()">🎓 شهادة</button> <button onclick="closeWin()">🌟 رائع!</button></div></div>
+<div id="win"><div class="wb"><div class="tr">🏆</div><h3 id="wn"></h3><p id="wp">جمع ١٠ أوسمة وفاز بالمسابقة! 🎉<br>بارك الله فيه وزاده من الأخلاق الحسنة</p><button class="g" onclick="gOpen()">🎮 العب</button> <button class="o" onclick="showCert()">🎓 شهادة</button> <button onclick="closeWin()">🌟 رائع!</button></div></div>
 <section id="cv" hidden></section>
+<div id="bk"><div class="pw" style="max-width:420px"><h3>💾 النسخ الاحتياطي</h3><textarea id="bkt" rows="6" style="width:100%;font-size:12px;direction:ltr;margin-bottom:8px" placeholder="تظهر هنا البيانات عند التصدير، أو الصق نسخة سابقة ثم اضغط استيراد"></textarea><div class="cb" style="flex-wrap:wrap"><button onclick="bkExport()">⬇️ تصدير</button><button class="g" onclick="bkImport()">📥 من النص</button><label class="bkl">📂 من ملف<input type="file" id="bkf" accept=".json,application/json" hidden></label><button class="o" onclick="bkX()">✖ إغلاق</button></div><p style="font-size:13px;margin:8px 0 0">⚠️ الاستيراد يستبدل البيانات الحالية. كلمة السر لا تُحفظ في النسخة.</p></div></div>
+<div id="gm"><div class="pw" style="max-width:420px"><h3 id="gt">🎮 ألعاب المكافأة</h3><div id="gbd"></div><div id="gst"></div><div class="cb"><button onclick="gMenu()">🎮 الألعاب</button><button class="o" onclick="gX()">✖ إغلاق</button></div></div></div>
 <div id="cu"><div class="pw"><h3>🎨 خصّص البطل</h3><div id="cug"></div><button onclick="cuX()">✔ تم</button></div></div>
 <div id="cp"><div class="pw"><h3>👶 من هو الطفل؟</h3><div id="cpl"></div><button class="o" onclick="cpX()">إلغاء</button></div></div>
 <div id="cert"><div><div class="cw" id="cw"></div><div class="cb"><button onclick="window.print()">🖨️ اطبع</button><button class="o" onclick="closeCert()">✖ إغلاق</button></div></div></div>
@@ -161,7 +177,10 @@ var D=[
 ["الرحمة","🐱","#ec407a","#f8bbd0","يرفق بالحيوان والصديق"],
 ["الابتسامة","😊","#f9a825","#fff176","ابتسامته صدقة وفرح"],
 ["إفشاء السلام","👋","#1e88e5","#90caf9","يبدأ بالسلام على الجميع"],
-["بطل الأسبوع","👑","#d4a017","#ffe27a","٧ أيام متتالية من الإنجاز"]
+["بطل الأسبوع","👑","#d4a017","#ffe27a","٧ أيام متتالية من الإنجاز"],
+["صائم صغير","🌙","#5b3fd0","#a99bff","يصوم ما يستطيع بحب"],
+["الصدقة","🪙","#d4a017","#ffe27a","يعطي ويساعد المحتاج"],
+["فرحة العيد","🎉","#e91e63","#ff9ec0","يفرح ويُفرح من حوله"]
 ];
 var AV=["🦁","🐯","🐼","🦊","🐰","🐵","🦄","🐸","🐧","🐨","🐶","🐱","🐻","🐘","🦒","🐬","🦉","🐢","🚀","⚽"],WIN=10,K=[],S=0;
 try{var o=JSON.parse(localStorage.getItem("awsima2")||"null");if(o){K=o.K||[];S=o.S||0}}catch(e){}
@@ -169,7 +188,9 @@ function save(){try{localStorage.setItem("awsima2",JSON.stringify({K:K,S:S}))}ca
 function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function medal(d,i){var a=d[2],b=d[3],id="m"+i;
 return '<div class="card" style="--c:'+a+'" onclick="award('+i+',event)"><svg viewBox="0 0 200 250" role="img" aria-label="وسام '+d[0]+'"><defs><radialGradient id="'+id+'" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="'+b+'"/><stop offset="1" stop-color="'+a+'"/></radialGradient></defs><polygon points="52,150 92,150 76,236 58,214 34,226" fill="'+a+'"/><polygon points="108,150 148,150 166,226 142,214 124,236" fill="'+b+'" stroke="'+a+'" stroke-width="2"/><circle cx="100" cy="95" r="86" fill="none" stroke="#ffd23f" stroke-width="14" stroke-dasharray="9 5"/><circle cx="100" cy="95" r="78" fill="#ffd23f"/><circle cx="100" cy="95" r="66" fill="url(#'+id+')" stroke="#fff" stroke-width="5"/><text x="100" y="118" font-size="68" text-anchor="middle">'+d[1]+'</text><text x="34" y="40" font-size="20">⭐</text><text x="150" y="36" font-size="16">✨</text><text x="164" y="150" font-size="18">⭐</text></svg><h2>'+d[0]+'</h2><p>'+d[4]+'</p></div>'}
-document.getElementById("g").innerHTML=D.map(medal).join("");
+var TH="";try{TH=localStorage.getItem("awsimaTH")||""}catch(e){}
+function grid(){document.getElementById("g").innerHTML=D.map(medal).filter(function(x,i){return i<22||TH}).join("")}
+grid();
 function render(){
 if(S>=K.length)S=Math.max(0,K.length-1);
 var mx=Math.max.apply(null,K.map(function(k){return k.m.length}).concat(0));
@@ -206,7 +227,7 @@ function saveT(){try{localStorage.setItem("awsimaT",JSON.stringify(T))}catch(e){
 function td(d){d=d||new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
 try{if(localStorage.getItem("awsimaD")!==td()){T.forEach(function(k){k.t.forEach(function(x){x.d=0})});localStorage.setItem("awsimaD",td());saveT()}}catch(e){}
 function week(k){var h=k.h||{},s="",n=0,N=["أحد","إثنين","ثلاثاء","أربعاء","خميس","جمعة","سبت"];for(var j=6;j>=0;j--){var d=new Date();d.setDate(d.getDate()-j);var y=h[td(d)];if(y)n++;s+='<span'+(y?' class="y"':'')+'>'+N[d.getDay()]+'<i>'+(y?"⭐":"▫️")+'</i></span>'}return '<div class="wk">'+s+'</div><div style="font-size:13px;font-weight:700;color:#5b4a8a">📅 أنجز هدفه '+n+' من ٧ أيام'+(streak(k)>1?' · 🔥 '+streak(k)+' أيام متتالية':'')+'</div>'}
-function tab(n){[1,2,3].forEach(function(x){document.getElementById("pg"+x).hidden=n!=x;document.getElementById("t"+x).className=n==x?"on":""});document.getElementById("mb").hidden=n!=1;if(n==2)renderT();if(n==3)renderB();snd([440,523])}
+function tab(n){[1,2,3,4].forEach(function(x){document.getElementById("pg"+x).hidden=n!=x;document.getElementById("t"+x).className=n==x?"on":""});document.getElementById("mb").hidden=n!=1;if(n==2)renderT();if(n==3)renderB();if(n==4)renderS();snd([440,523])}
 function renderT(){
 document.getElementById("tl").innerHTML=T.length?T.map(function(k,i){
 var G=k.g||TG,c=k.t.filter(function(x){return x.d}).length,d=Math.min(c,G),n=G,all=c>=G,p=Math.round(d/G*100);
@@ -243,10 +264,64 @@ document.getElementById("bl").innerHTML=h}
 var CU=null,CL=["#ff5a8a","#ff8a3d","#f9a825","#14b88a","#2bb0ff","#7c5cff","#d94fd1","#e53935"];
 function custom(l,i,e){if(e&&e.stopPropagation)e.stopPropagation();CU=(l?T:K)[i];if(!CU)return;drawCU();document.getElementById("cu").className="on"}
 function cuX(){document.getElementById("cu").className=""}
-function drawCU(){document.getElementById("cug").innerHTML='<div class="pk">'+AV.map(function(a,x){return '<button class="'+(CU.a%AV.length==x?'on':'')+'" onclick="setAv('+x+')">'+a+'</button>'}).join("")+'</div><div class="cs">'+CL.map(function(c,x){return '<button class="'+(CU.c==c?'on':'')+'" style="background:'+c+'" onclick="setCol('+x+')" aria-label="لون"></button>'}).join("")+'</div>'}
+function drawCU(){document.getElementById("cug").innerHTML='<div class="pk">'+AV.map(function(a,x){return '<button class="'+(CU.a%AV.length==x?'on':'')+'" onclick="setAv('+x+')">'+a+'</button>'}).join("")+'</div><div class="cs">'+CL.map(function(c,x){return '<button class="'+(CU.c==c?'on':'')+'" style="background:'+c+'" onclick="setCol('+x+')" aria-label="لون"></button>'}).join("")+'</div><input style="width:100%;font-size:16px;text-align:right" maxlength="80" placeholder="💌 رسالة تشجيع تظهر للطفل" value="'+esc(CU.nt||"")+'" onchange="setNote(this.value)">'}
 function cuApply(f){[K,T].forEach(function(L){L.forEach(function(e){if(nk(e.n)==nk(CU.n))f(e)})});save();saveT();render();renderT();if(CH)renderCV();drawCU()}
 function setAv(x){cuApply(function(e){e.a=x})}
 function setCol(x){cuApply(function(e){e.c=CL[x]})}
+var R=[],SP={},PL=[];try{R=JSON.parse(localStorage.getItem("awsimaR")||"[]")||[];SP=JSON.parse(localStorage.getItem("awsimaS")||"{}")||{}}catch(e){}
+function saveR(){try{localStorage.setItem("awsimaR",JSON.stringify(R));localStorage.setItem("awsimaS",JSON.stringify(SP))}catch(e){}}
+function earned(n){var q=nk(n),p=0;K.forEach(function(k){if(nk(k.n)==q)p+=k.m.length*10});T.forEach(function(k){if(nk(k.n)==q)p+=Object.keys(k.h||{}).length*5});return p}
+function bal(n){var s=SP[nk(n)];return Math.max(0,earned(n)-(s?s.s:0))}
+function names(){var o=[],sn={};K.concat(T).forEach(function(k){var q=nk(k.n);if(q&&!sn[q]){sn[q]=1;o.push(k.n)}});return o}
+function renderS(){var h='<div class="bar" style="margin-bottom:12px"><input id="rn" placeholder="مكافأة، مثل: آيس كريم 🍦" maxlength="30"><input id="rc" type="number" min="1" max="999" placeholder="النقاط" style="width:90px"><button onclick="addR()">➕ أضف</button></div>';
+h+=R.length?R.map(function(r,i){return '<div class="bd"><span class="rk">🎁</span><b>'+esc(r.n)+'</b><span class="sp"></span><span>⭐ '+r.c+'</span><button class="rm" onclick="delR('+i+')" aria-label="حذف">✖</button></div>'}).join(""):'<div class="hint">🎁 أضف مكافآت ليشتريها الأطفال بنقاطهم</div>';
+var nm=names();if(nm.length)h+='<div class="cv-b"><h3>💰 أرصدة الأطفال</h3>'+nm.map(function(n){return '<div style="font-weight:700">'+esc(n)+': <b>'+bal(n)+'</b> نقطة</div>'}).join("")+'<small>النقاط = ١٠ لكل وسام + ٥ لكل يوم إنجاز، ناقص ما اشتراه الطفل</small></div>';
+PL=[];Object.keys(SP).forEach(function(q){SP[q].l.forEach(function(x,j){PL.push({q:q,j:j,x:x,n:SP[q].n})})});
+if(PL.length)h+='<div class="cv-b"><h3>🧾 المشتريات</h3>'+PL.map(function(p,i){return '<div class="ti'+(p.x.ok?' d':'')+'"><span class="tx">'+esc(p.n)+' ← '+esc(p.x.n)+' ('+p.x.c+')</span>'+(p.x.ok?'✔':'<button class="g" onclick="dlv('+i+')">تم التسليم</button><button class="o" onclick="rfd('+i+')" aria-label="استرجاع">↩️</button>')+'</div>'}).join("")+'</div>';
+document.getElementById("sl").innerHTML=h}
+function addR(){var n=document.getElementById("rn").value.trim(),c=Math.round(+document.getElementById("rc").value);if(!n||!(c>0))return toast("اكتب اسم المكافأة وعدد النقاط");if(R.length>=12)return toast("الحد الأقصى ١٢ مكافأة");R.push({n:n,c:c});saveR();renderS();snd([523,659])}
+function delR(i){R.splice(i,1);saveR();renderS()}
+function dlv(i){var p=PL[i];if(p){SP[p.q].l[p.j].ok=1;saveR();renderS()}}
+function rfd(i){var p=PL[i];if(p){var s=SP[p.q];s.s=Math.max(0,s.s-s.l[p.j].c);s.l.splice(p.j,1);saveR();renderS();toast("تم استرجاع النقاط ↩️")}}
+function buy(i){var r=R[i];if(!r||!CH)return;if(bal(CH)<r.c)return toast("نقاطك لا تكفي بعد 💪");var q=nk(CH),s=SP[q]=SP[q]||{n:CH,s:0,l:[]};s.s+=r.c;s.l.push({n:r.n,c:r.c,d:td(),ok:0});saveR();renderCV();toast("🎉 تم! اطلب مكافأتك من ولي الأمر");burst(innerWidth/2,innerHeight/2,50);snd([523,659,784,1047])}
+var GT=0,TL=["","r","e"],TN={"":"🎨 عادي",r:"🌙 رمضان",e:"🎉 العيد"};
+function applyTH(){document.body.classList.remove("th-r","th-e");if(TH)document.body.classList.add("th-"+TH);document.getElementById("thb").textContent=TN[TH]}
+function thNext(){TH=TL[(TL.indexOf(TH)+1)%3];try{localStorage.setItem("awsimaTH",TH)}catch(e){}applyTH();grid();toast(TH?"تم تفعيل ثيم "+TN[TH]+(TH=="r"?" — ظهر وسام صائم صغير 🌙":" — ظهرت الأوسمة الموسمية"):"عاد الشكل العادي")}
+function gMenu(){clearInterval(GT);document.getElementById("gt").textContent="🎮 ألعاب المكافأة";document.getElementById("gbd").innerHTML='<div class="gmn"><button onclick="gStart()">🧠 لعبة الذاكرة</button><button class="g" onclick="qStart()">❓ أسئلة دينية</button><button class="o" onclick="sStart()">⭐ اصطد النجوم</button><button onclick="nStart()">🔢 رتّب الأرقام</button></div>';document.getElementById("gst").textContent="اختر لعبتك 👇"}
+function party(){var w=innerWidth;for(var j=0;j<4;j++)setTimeout(function(){burst(Math.random()*w,innerHeight*.3,60)},j*300);snd([523,659,784,1047])}
+var QB=[["كم عدد أركان الإسلام؟","٥",["٣","٤","٦"]],["كم عدد الصلوات المفروضة في اليوم والليلة؟","٥",["٣","٤","٧"]],["ما أول صلاة في اليوم؟","الفجر",["الظهر","العصر","العشاء"]],["كم عدد ركعات صلاة المغرب؟","٣",["٢","٤","٥"]],["كم عدد ركعات صلاة الفجر؟","٢",["٣","٤","١"]],["ما اسم الكتاب الذي أنزله الله على نبينا محمد ﷺ؟","القرآن الكريم",["التوراة","الإنجيل","الزبور"]],["ما أول سورة في القرآن الكريم؟","الفاتحة",["البقرة","الإخلاص","الناس"]],["ما آخر سورة في المصحف؟","الناس",["الفلق","الإخلاص","الكوثر"]],["كم عدد سور القرآن الكريم؟","١١٤",["١٠٠","١٢٠","٩٩"]],["في أي شهر نصوم؟","رمضان",["شعبان","محرم","ذو الحجة"]],["أين تقع الكعبة المشرفة؟","مكة المكرمة",["المدينة المنورة","القدس","جدة"]],["إلى أي مدينة هاجر النبي ﷺ؟","المدينة المنورة",["الطائف","مكة المكرمة","الشام"]],["من هو أول الأنبياء؟","آدم عليه السلام",["نوح عليه السلام","موسى عليه السلام","محمد ﷺ"]],["من هو خاتم الأنبياء؟","محمد ﷺ",["عيسى عليه السلام","موسى عليه السلام","إبراهيم عليه السلام"]],["من النبي الذي كلّمه الله تكليمًا؟","موسى عليه السلام",["عيسى عليه السلام","نوح عليه السلام","داود عليه السلام"]],["من النبي الذي ابتلعه الحوت؟","يونس عليه السلام",["موسى عليه السلام","أيوب عليه السلام","هود عليه السلام"]],["من النبي الذي بنى الكعبة مع ابنه إسماعيل؟","إبراهيم عليه السلام",["نوح عليه السلام","يوسف عليه السلام","يونس عليه السلام"]],["ما اسم الملك الذي نزل بالوحي؟","جبريل عليه السلام",["ميكائيل عليه السلام","إسرافيل عليه السلام","مالك"]],["من هو الصحابي الملقّب بالصدّيق؟","أبو بكر رضي الله عنه",["عمر رضي الله عنه","عثمان رضي الله عنه","علي رضي الله عنه"]],["ماذا نقول قبل الأكل؟","بسم الله",["الحمد لله","سبحان الله","لا إله إلا الله"]],["ماذا نقول بعد الأكل؟","الحمد لله",["بسم الله","الله أكبر","أستغفر الله"]],["ماذا نقول عند العطاس؟","الحمد لله",["بسم الله","سبحان الله","أستغفر الله"]],["بأي يد نأكل؟","اليمين",["اليسار","أي يد","اليدين معًا"]],["ما الصلاة التي بعد غروب الشمس مباشرة؟","المغرب",["الظهر","العصر","الفجر"]],["ما اسم العيد بعد صيام رمضان؟","عيد الفطر",["عيد الأضحى","يوم عرفة","عاشوراء"]]],QS=[],qi=0,qs=0;
+function qStart(){clearInterval(GT);document.getElementById("gt").textContent="❓ أسئلة دينية";QS=QB.slice().sort(function(){return Math.random()-.5}).slice(0,5);qi=0;qs=0;qDraw()}
+function qDraw(){var b=QS[qi],st=document.getElementById("gst");
+if(!b){document.getElementById("gbd").innerHTML='<div style="font-size:60px">'+(qs>=4?"🏆":"🌟")+'</div><p style="font-weight:800;font-size:20px">نتيجتك: '+qs+' من ٥</p>';st.textContent=qs>=4?"ما شاء الله! بارك الله فيك 🎉":"أحسنت! حاول مرة أخرى 💪";if(qs>=4)party();return}
+var o=[b[1]].concat(b[2]).sort(function(){return Math.random()-.5});
+document.getElementById("gbd").innerHTML='<p style="font-weight:900;font-size:20px;margin:0 0 10px">'+esc(b[0])+'</p>'+o.map(function(x){return '<button class="qo" data-a="'+(x==b[1]?1:0)+'" onclick="qAns(this)">'+esc(x)+'</button>'}).join("");
+st.textContent="سؤال "+(qi+1)+" من ٥"}
+function qAns(el){var ok=el.dataset.a=="1";document.querySelectorAll(".qo").forEach(function(x){x.disabled=true;if(x.dataset.a=="1")x.style.background="#14b88a"});if(ok){qs++;snd([659,784])}else{el.style.background="#e53935";snd([300])}setTimeout(function(){qi++;qDraw()},1100)}
+function sStart(){clearInterval(GT);document.getElementById("gt").textContent="⭐ اصطد النجوم";var sc=0,t=200,st=document.getElementById("gst");document.getElementById("gbd").innerHTML='<div id="sky"></div>';var sky=document.getElementById("sky");st.textContent="النقاط: 0 · الوقت: 20";
+GT=setInterval(function(){t--;
+if(t%6==0){var e=document.createElement("button");e.className="sk";e.textContent=["⭐","🌙","💎","🎁"][Math.floor(Math.random()*4)];e.style.left=Math.random()*80+"%";e.style.top=Math.random()*75+"%";e.dataset.t=t-14;e.onclick=function(){sc++;e.remove();snd([880]);st.textContent="النقاط: "+sc+" · الوقت: "+Math.ceil(t/10)};sky.appendChild(e)}
+sky.querySelectorAll(".sk").forEach(function(x){if(t<=+x.dataset.t)x.remove()});
+if(t%10==0&&t>0)st.textContent="النقاط: "+sc+" · الوقت: "+Math.ceil(t/10);
+if(t<=0){clearInterval(GT);sky.innerHTML='<div style="padding-top:80px;text-align:center">'+(sc>=15?"🏆":"🌟")+'<br>'+sc+' نجمة!</div>';st.textContent=sc>=15?"ما شاء الله! بطل النجوم 🎉":"أحسنت! حاول تجمع ١٥ نجمة 💪";if(sc>=15)party()}},100)}
+function nStart(){clearInterval(GT);document.getElementById("gt").textContent="🔢 رتّب الأرقام";var nx=1,t0=Date.now(),st=document.getElementById("gst"),A9=["١","٢","٣","٤","٥","٦","٧","٨","٩"],a=[1,2,3,4,5,6,7,8,9].sort(function(){return Math.random()-.5});
+st.textContent="اضغط الأرقام من ١ إلى ٩ بالترتيب";
+document.getElementById("gbd").innerHTML='<div class="gb" style="grid-template-columns:repeat(3,1fr)">'+a.map(function(n){return '<button class="gc" data-n="'+n+'">'+A9[n-1]+'</button>'}).join("")+'</div>';
+document.querySelectorAll("#gbd .gc").forEach(function(b){b.onclick=function(){if(+b.dataset.n==nx){b.className="gc m";b.disabled=true;snd([440+nx*60]);nx++;if(nx>9){st.textContent="🎉 أنهيتها في "+((Date.now()-t0)/1000).toFixed(1)+" ثانية!";party()}}else{b.style.background="#e53935";setTimeout(function(){b.style.background=""},300);snd([200])}}})}
+function setNote(v){cuApply(function(e){e.nt=v.trim()})}
+function bkOpen(){document.getElementById("bkt").value="";document.getElementById("bk").className="on"}
+function bkX(){document.getElementById("bk").className=""}
+function bkExport(){var j=JSON.stringify({v:2,d:td(),K:K,T:T,R:R,SP:SP});document.getElementById("bkt").value=j;try{var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([j],{type:"application/json"}));a.download="awsima-backup-"+td()+".json";document.body.appendChild(a);a.click();a.remove()}catch(e){}toast("تم التصدير ✅ انسخ النص أو احفظ الملف")}
+function bkLoad(j){try{var o=JSON.parse(j);if(!o||!Array.isArray(o.K)||!Array.isArray(o.T)||!o.K.every(function(k){return k&&typeof k.n=="string"&&Array.isArray(k.m)})||!o.T.every(function(k){return k&&typeof k.n=="string"&&Array.isArray(k.t)}))throw 0;K=o.K;T=o.T;S=0;R=Array.isArray(o.R)?o.R.filter(function(r){return r&&typeof r.n=="string"&&+r.c>0}):[];SP={};if(o.SP&&typeof o.SP=="object")Object.keys(o.SP).forEach(function(q){var z=o.SP[q];if(z&&typeof z.n=="string"&&Array.isArray(z.l))SP[q]={n:z.n,s:+z.s||0,l:z.l.filter(function(x){return x&&typeof x.n=="string"})}});saveR();render();renderT();bkX();toast("تم استيراد البيانات ✅")}catch(e){toast("البيانات غير صالحة ❌")}}
+function bkImport(){bkLoad(document.getElementById("bkt").value)}
+document.getElementById("bkf").addEventListener("change",function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){bkLoad(r.result)};r.readAsText(f);e.target.value=""});
+var GC=[],gp=[],gm=0,gl=false;
+function gStart(){clearInterval(GT);document.getElementById("gt").textContent="🧠 لعبة الذاكرة";var e=D.slice(0,21).map(function(d){return d[1]}).sort(function(){return Math.random()-.5}).slice(0,6);GC=e.concat(e).sort(function(){return Math.random()-.5}).map(function(x){return{e:x,f:0,m:0}});gp=[];gm=0;gl=false;gDraw()}
+function gDraw(){document.getElementById("gbd").innerHTML='<div class="gb">'+GC.map(function(c,i){return '<button class="gc'+(c.m?' m f':(c.f?' f':''))+'" onclick="gFlip('+i+')">'+((c.f||c.m)?c.e:'❓')+'</button>'}).join("")+'</div>';document.getElementById("gst").textContent="الحركات: "+gm}
+function gFlip(i){var c=GC[i];if(gl||c.f||c.m)return;c.f=1;gp.push(i);snd([440]);gDraw();
+if(gp.length==2){gm++;gl=true;var a=GC[gp[0]],b=GC[gp[1]];setTimeout(function(){if(a.e==b.e){a.m=b.m=1;burst(innerWidth/2,innerHeight/2,20);snd([659,784])}a.f=b.f=0;gp=[];gl=false;gDraw();
+if(GC.every(function(x){return x.m})){document.getElementById("gst").textContent="🎉 ما شاء الله! أنهيتها في "+gm+" حركة";var w=innerWidth;for(var j=0;j<4;j++)setTimeout(function(){burst(Math.random()*w,innerHeight*.3,60)},j*300);snd([523,659,784,1047])}},700)}}
+function gOpen(){document.getElementById("gm").className="on";gMenu()}
+function gX(){clearInterval(GT);document.getElementById("gm").className=""}
 function nk(s){return (s||"").trim().toLowerCase()}
 function childPick(){CN=[];var seen={};K.concat(T).forEach(function(k){var q=nk(k.n);if(q&&!seen[q]){seen[q]=1;CN.push(k.n)}});
 if(!CN.length)return toast("أضف طفلًا أولًا 👆");
@@ -256,12 +331,13 @@ function enterChild(i){CH=CN[i];unl=false;lkset();cpX();document.body.classList.
 function exitChild(){CH="";document.body.classList.remove("ch");document.getElementById("cv").hidden=true;toast("عدت إلى وضع ولي الأمر")}
 function renderCV(){var m=null,t=null,ti=-1;
 K.forEach(function(k){if(nk(k.n)==nk(CH))m=k});T.forEach(function(k,i){if(nk(k.n)==nk(CH)){t=k;ti=i}});
-var a=(m||t||{a:0}).a,h='<div class="cv-h"><div class="av">'+AV[a%AV.length]+'</div><h2 style="color:'+((m||t||{}).c||"#ff5a8a")+'">أهلًا '+esc(CH)+'! 🌟</h2></div>';
+var a=(m||t||{a:0}).a,h='<div class="cv-h"><div class="av">'+AV[a%AV.length]+'</div><h2 style="color:'+((m||t||{}).c||"#ff5a8a")+'">أهلًا '+esc(CH)+'! 🌟</h2></div>';var nt=(m&&m.nt)||(t&&t.nt);if(nt)h+='<div class="cv-b" style="text-align:center;background:#fff9d9;font-weight:800;font-size:20px">💌 '+esc(nt)+'</div>';
 var c={},n=m?m.m.length:0,st="";if(m)m.m.forEach(function(x){c[x]=(c[x]||0)+1});
 for(var j=0;j<WIN;j++)st+=j<n?"⭐":"☆";
 h+='<div class="cv-b"><h3>🏅 أوسمتي</h3><div style="direction:ltr;text-align:center;font-size:22px">'+st+'</div><div style="text-align:center;font-weight:800;color:#ff5a8a">'+n+' / '+WIN+'</div><div style="text-align:center">'+(n?Object.keys(c).map(function(x){return '<span class="mc"><b>'+D[x][1]+'</b>'+D[x][0]+(c[x]>1?'<em>×'+c[x]+'</em>':'')+'</span>'}).join(""):'<p>لم تحصل على أوسمة بعد، هيا اجتهد! 💪</p>')+'</div></div>';
 if(t){var G=t.g||TG,cn=Math.min(G,t.t.filter(function(x){return x.d}).length);
-h+='<div class="cv-b"><h3>✅ مهامي اليوم</h3><div class="pb"><i style="width:'+Math.round(cn/G*100)+'%"></i></div><div style="font-weight:800;text-align:center;margin-bottom:6px">أنجز '+G+' مهام لتحتفل 🎉 ('+cn+' / '+G+')</div>'+(t.t.length?t.t.map(function(x,j){return '<div class="ti'+(x.d?' d':'')+'"><button class="ck" onclick="chk('+ti+','+j+',event)" aria-label="تم">'+(x.d?'✔':'')+'</button><span class="tx">'+esc(x.s)+'</span></div>'}).join(""):'<p>لا توجد مهام بعد.</p>')+week(t)+'</div>'}
+h+='<div class="cv-b"><h3>✅ مهامي اليوم</h3><div class="pb"><i style="width:'+Math.round(cn/G*100)+'%"></i></div><div style="font-weight:800;text-align:center;margin-bottom:6px">أنجز '+G+' مهام لتحتفل 🎉 ('+cn+' / '+G+')</div>'+(t.t.length?t.t.map(function(x,j){return '<div class="ti'+(x.d?' d':'')+'"><button class="ck" onclick="chk('+ti+','+j+',event)" aria-label="تم">'+(x.d?'✔':'')+'</button><span class="tx">'+esc(x.s)+'</span></div>'}).join(""):'<p>لا توجد مهام بعد.</p>')+week(t)+(cn>=G?'<div class="cb"><button class="g" onclick="gOpen()">🎮 لعبة المكافأة</button></div>':'<div style="text-align:center;font-weight:700;color:#5b4a8a;margin-top:8px">🔒 أنجز مهامك لتفتح لعبة المكافأة</div>')+'</div>'}
+if(R.length){var bl=bal(CH),sp=SP[nk(CH)];h+='<div class="cv-b"><h3>🛒 متجر النقاط</h3><div style="text-align:center;font-weight:800;color:#ff5a8a;margin-bottom:6px">رصيدك: '+bl+' ⭐</div>'+R.map(function(r,i){return '<div class="ti"><span class="tx">🎁 '+esc(r.n)+' <small>⭐ '+r.c+'</small></span><button '+(bl>=r.c?'':'disabled style="opacity:.4"')+' onclick="buy('+i+')">اشترِ</button></div>'}).join("")+(sp&&sp.l.length?'<div style="margin-top:8px;font-weight:700">'+sp.l.slice(-3).map(function(x){return '<div>🎁 '+esc(x.n)+(x.ok?' ✔ سُلّمت':' ⏳ بانتظار التسليم')+'</div>'}).join("")+'</div>':'')+'</div>'}
 h+='<div class="cb"><button class="o" onclick="exitChild()">🔒 خروج (لولي الأمر)</button></div>';
 document.getElementById("cv").innerHTML=h}
 var PIN="",unl=false,pcb=null,pmode="";
@@ -279,8 +355,8 @@ document.getElementById("pv").addEventListener("keydown",function(e){if(e.key=="
 function goal(i,d){var k=T[i];k.g=Math.max(1,Math.min(20,(k.g||TG)+d));renderT()}
 function winT(k){CW={n:k.n,a:k.a,r:"إنجاز "+(k.g||TG)+" مهام اليوم بنشاط ومسؤولية"};document.getElementById("wn").textContent=AV[k.a%AV.length]+" "+k.n;document.getElementById("wp").innerHTML="أنجز "+(k.g||TG)+" مهام! 🎉<br>ما شاء الله، بطل مسؤول ونشيط 🌟";document.getElementById("win").className="on";var w=innerWidth;for(var j=0;j<6;j++)setTimeout(function(){burst(Math.random()*w,innerHeight*.3,70)},j*350);snd([523,659,784,1047,784,1047,1319])}
 if("serviceWorker" in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(function(){});
-["addKid","undo","newRound","del","award","addTK","addTask","rmT","delT","resetTasks","goal","childPick","exitChild","custom"].forEach(function(n){var f=window[n];window[n]=function(){var a=arguments;ask(function(){f.apply(null,a)})}});
-lkset();
+["addKid","undo","newRound","del","award","addTK","addTask","rmT","delT","resetTasks","goal","childPick","exitChild","custom","bkOpen","addR","delR","dlv","rfd","thNext"].forEach(function(n){var f=window[n];window[n]=function(){var a=arguments;ask(function(){f.apply(null,a)})}});
+lkset();applyTH();
 render();
 </script>
 </body>
